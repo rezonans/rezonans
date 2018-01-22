@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "571e0c2ee69f8af5921a94163506aabe",
+    "content-hash": "d72e2ab9ad9c29b1c34dea570cbfdb45",
     "packages": [
         {
             "name": "composer/installers",
@@ -1695,12 +1695,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rezonans/rezonans-core.git",
-                "reference": "939a5bd2b95954c7200be9e41142ee53e8412495"
+                "reference": "4afa65e3cd069581bfb7e6bef0475f4e52af7de1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rezonans/rezonans-core/zipball/939a5bd2b95954c7200be9e41142ee53e8412495",
-                "reference": "939a5bd2b95954c7200be9e41142ee53e8412495",
+                "url": "https://api.github.com/repos/rezonans/rezonans-core/zipball/4afa65e3cd069581bfb7e6bef0475f4e52af7de1",
+                "reference": "4afa65e3cd069581bfb7e6bef0475f4e52af7de1",
                 "shasum": ""
             },
             "require": {
@@ -1733,8 +1733,8 @@
                     "email": "ls.shov@gmail.com"
                 }
             ],
-            "description": "The core package of Rezonans, provide implementation of main functionality of Rezonans",
-            "time": "2018-01-20T15:02:53+00:00"
+            "description": "The core package of the Rezonans, provide implementation of main functionality",
+            "time": "2018-01-22T19:37:55+00:00"
         },
         {
             "name": "symfony/dotenv",

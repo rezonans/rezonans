@@ -1,5 +1,5 @@
 <p align="center"><img src="https://comet.by/img/resonans-1-compiled.svg"></p>
-<p align="center"><sup>WordPress Continuous Integration</sup></p>
+<p align="center"><sup>Docker ∿ WordPress ∿ Application ∿ Front inject ∿ CI</sup></p>
 <p align="center">
 <a href="https://travis-ci.org/rezonans/rezonans"><img src="https://travis-ci.org/rezonans/rezonans.svg?branch=master">
 <img src="https://img.shields.io/packagist/dt/rezonans/rezonans.svg">
