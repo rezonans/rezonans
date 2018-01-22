@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d72e2ab9ad9c29b1c34dea570cbfdb45",
+    "content-hash": "a67c672eaf9f9f2cafbe86f23c7a89b9",
     "packages": [
         {
             "name": "composer/installers",
@@ -1691,7 +1691,7 @@
         },
         {
             "name": "rezonans/rezonans-core",
-            "version": "dev-master",
+            "version": "v0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rezonans/rezonans-core.git",
@@ -3560,9 +3560,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "rezonans/rezonans-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
