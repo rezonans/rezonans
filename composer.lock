@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a67c672eaf9f9f2cafbe86f23c7a89b9",
+    "content-hash": "5a0ff34689958cb79fe01afb58e6366d",
     "packages": [
         {
             "name": "composer/installers",
@@ -1691,16 +1691,16 @@
         },
         {
             "name": "rezonans/rezonans-core",
-            "version": "v0.1",
+            "version": "dev-11-make-installation-and-basic-configuration-of-the-wordpress-the-automatic-after-creating-the-project",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rezonans/rezonans-core.git",
-                "reference": "4afa65e3cd069581bfb7e6bef0475f4e52af7de1"
+                "reference": "e3e6b840740f4363bb35b56475a15656cdbdc3c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rezonans/rezonans-core/zipball/4afa65e3cd069581bfb7e6bef0475f4e52af7de1",
-                "reference": "4afa65e3cd069581bfb7e6bef0475f4e52af7de1",
+                "url": "https://api.github.com/repos/rezonans/rezonans-core/zipball/e3e6b840740f4363bb35b56475a15656cdbdc3c8",
+                "reference": "e3e6b840740f4363bb35b56475a15656cdbdc3c8",
                 "shasum": ""
             },
             "require": {
@@ -1734,7 +1734,7 @@
                 }
             ],
             "description": "The core package of the Rezonans, provide implementation of main functionality",
-            "time": "2018-01-22T19:37:55+00:00"
+            "time": "2018-01-24T15:07:56+00:00"
         },
         {
             "name": "symfony/dotenv",
@@ -3560,7 +3560,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rezonans/rezonans-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

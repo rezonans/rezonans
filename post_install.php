@@ -6,25 +6,35 @@ namespace PostInstallScript;
  * Do not run this script manually if u don't know what you doing
  */
 
-define('BASE_PATH', __DIR__);
-define('WP_PATH', BASE_PATH . '/wordpress');
+$basePath = __DIR__;
+$binPath = $basePath . '/vendor/bin';
+$wpPath = $basePath . '/wordpress';
 
-if (!is_dir(WP_PATH)) {
+$wpCliPath = $binPath . '/wp-cli.phar';
+if(!is_dir($binPath)) {
+    mkdir($binPath);
+}
+
+if (!file_exists($wpCliPath)) {
+    copy('https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar', $wpCliPath);
+}
+
+if (!is_dir($wpPath)) {
     throw new \Exception("Have no installed wordpress!");
 }
 
 copy(__DIR__ . '/.env.dist', __DIR__ . '/.env');
 
-$themeFolder = WP_PATH . '/wp-content/themes/rezonans';
+$themeFolder = $wpPath . '/wp-content/themes/rezonans';
 
 $foldersToCreate = [
     $themeFolder . '/css',
     $themeFolder . '/fonts',
     $themeFolder . '/images',
     $themeFolder . '/js',
-    BASE_PATH . '/src',
-    BASE_PATH . '/src/app',
-    BASE_PATH . '/src/app/templates',
+    $basePath . '/src',
+    $basePath . '/src/app',
+    $basePath . '/src/app/templates',
 ];
 
 $createDir = function ($dirPath) {
@@ -47,15 +57,7 @@ foreach ($foldersToCreate as $dirPath) {
 $functionsPhpPath = $themeFolder . '/functions.php';
 $functionsPhpContent = <<<'END'
 <?php
-/**
- * Composer autoload
- **/
-require_once ABSPATH . '/../vendor/autoload.php';
- 
-/**
- * Load rezonans app
- */
-require_once ABSPATH . '/../bootstrap/app.php';
+
 END;
 
 file_put_contents($functionsPhpPath, $functionsPhpContent);

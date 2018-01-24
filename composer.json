@@ -1,8 +1,8 @@
 {
   "name": "rezonans/rezonans",
-  "description": "Docker - WordPress - Front inject - Continuous Integration",
+  "description": "Build your modern Application with Wordpress and modern front, on Docker with CI",
   "type": "project",
-  "keywords": ["wp", "wordpress", "rezonans"],
+  "keywords": ["wp", "wordpress", "rezonans", "docker", "CI"],
   "authors": [
     {
       "name": "Alexandr Shevchenko",
@@ -20,13 +20,11 @@
     "php": ">=7.1",
     "johnpbloch/wordpress": "^4.9",
     "wpackagist-plugin/advanced-custom-fields": "^4.0",
-    "rezonans/rezonans-core": "0.1"
+    "rezonans/rezonans-core": "dev-11-make-installation-and-basic-configuration-of-the-wordpress-the-automatic-after-creating-the-project"
   },
   "extra": {
     "installer-paths": {
-      "wordpress/wp-content/plugins/{$name}": [
-        "wpackagist-plugin/advanced-custom-fields"
-      ]
+      "wordpress/wp-content/plugins/{$name}": ["type:wordpress-plugin"]
     }
   },
   "require-dev": {
