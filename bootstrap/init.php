@@ -23,17 +23,9 @@ $core = require_once(__DIR__ . '/core.php');
 /**
  * Configuration, make the environment
  */
-Configurator
-    ::loadEnv(Path::getProjectRoot('/.env'))
-    ->readConfigDir(Path::getConfigPath());
+Configurator::loadEnv(Path::getProjectRoot('/.env'));
 
 /**
- * Wordpress settings up
+ * App config
  */
-$table_prefix  = Configurator::env('WP_TABLE_PREFIX');
-require_once(Path::getWpPath('/wp-settings.php'));
-
-/**
- * Load rezonans app
- */
-require_once(__DIR__ . '/app.php');
+require_once(Path::getConfigPath('/app.php'));

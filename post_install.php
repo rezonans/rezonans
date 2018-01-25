@@ -57,7 +57,18 @@ foreach ($foldersToCreate as $dirPath) {
 $functionsPhpPath = $themeFolder . '/functions.php';
 $functionsPhpContent = <<<'END'
 <?php
-
+    /** Start App */
+    if(!defined('REZONANS_ROOT')) {
+        wp_head();
+        ?>
+            <h1>
+                To use this theme you should install rezonans first!
+            </h1>
+        <?
+        wp_footer();
+        exit;
+    }
+    require_once(REZONANS_ROOT . '/bootstrap/app.php');
 END;
 
 file_put_contents($functionsPhpPath, $functionsPhpContent);
