@@ -20,7 +20,7 @@
     "php": ">=7.1",
     "johnpbloch/wordpress": "^4.9",
     "wpackagist-plugin/advanced-custom-fields": "^4.0",
-    "rezonans/rezonans-core": "dev-11-make-installation-and-basic-configuration-of-the-wordpress-the-automatic-after-creating-the-project"
+    "rezonans/rezonans-core": "dev-master"
   },
   "extra": {
     "installer-paths": {
