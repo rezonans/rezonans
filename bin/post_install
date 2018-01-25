@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 namespace PostInstallScript;
@@ -6,13 +7,13 @@ namespace PostInstallScript;
  * Do not run this script manually if u don't know what you doing
  */
 
-$basePath = __DIR__;
-$binPath = $basePath . '/vendor/bin';
+$basePath = __DIR__ . '/..';
+$vendorBinPath = $basePath . '/vendor/bin';
 $wpPath = $basePath . '/wordpress';
 
-$wpCliPath = $binPath . '/wp-cli.phar';
-if(!is_dir($binPath)) {
-    mkdir($binPath);
+$wpCliPath = $vendorBinPath . '/wp-cli.phar';
+if(!is_dir($vendorBinPath)) {
+    mkdir($vendorBinPath);
 }
 
 if (!file_exists($wpCliPath)) {
@@ -23,7 +24,7 @@ if (!is_dir($wpPath)) {
     throw new \Exception("Have no installed wordpress!");
 }
 
-copy(__DIR__ . '/.env.dist', __DIR__ . '/.env');
+copy($basePath . '/.env.dist', $basePath . '/.env');
 
 $themeFolder = $wpPath . '/wp-content/themes/rezonans';
 
@@ -62,7 +63,7 @@ $functionsPhpContent = <<<'END'
         wp_head();
         ?>
             <h1>
-                To use this theme you should install rezonans first!
+                To use this theme you should <a href="https://github.com/rezonans/rezonans">install the rezonans</a> first!
             </h1>
         <?
         wp_footer();

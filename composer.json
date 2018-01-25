@@ -38,7 +38,7 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "php post_install.php"
+      "bin/post_install"
     ]
   }
 }

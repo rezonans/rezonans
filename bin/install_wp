@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+cd ${BASH_SOURCE%/*}/../docker
+docker-compose exec php-fpm ./bin/wp core install --url='http://localhost' --title='title' --admin_user='admin@test.com' --admin_password='1234qwerrbaetGRGW' --admin_email='admin@test.com' --skip-email --path=wordpress --allow-root --debug
+docker-compose exec php-fpm ./bin/wp theme activate rezonans --path=wordpress --allow-root --debug
+docker-compose exec php-fpm ./bin/wp plugin activate advanced-custom-fields --path=wordpress --allow-root --debug
+docker-compose exec php-fpm ./bin/wp rewrite structure '/%category%/%postname%/' --path=wordpress --allow-root --debug
