@@ -1,8 +1,8 @@
 .idea
 /vendor
 /wordpress
-/docker-config/db
-/docker-config/.env
+/docker/db
+/docker/.env
 /src/front/psd/
 /src/front/png/
 /src/front/jpg/

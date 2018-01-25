@@ -10,11 +10,11 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
     links:
-      - php
+      - php-fpm
     volumes_from:
       - app-data
 
-  php:  
+  php-fpm:
     build: ./php/
     container_name: "php-fpm"
     env_file: .env
@@ -35,7 +35,7 @@ services:
     env_file: .env
 
   app-data:
-    image: php:7.0-fpm
+    image: php:7.2-fpm
     container_name: "app-data"
     volumes:
       - ../:/var/www/html

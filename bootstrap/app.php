@@ -4,16 +4,15 @@ use App\App;
 use Monolog\Formatter\HtmlFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
-use Rezonans\Core\Core;
+use Rezonans\Core\Facades\Configurator;
+use Rezonans\Core\Facades\Core;
 use Rezonans\Core\Facades\Path;
 
-$core = new Core();
-
 (new App(__DIR__ . DIRECTORY_SEPARATOR . '..'))
-    ->beforeRun(function (Core $core) {
+    ->beforeRun(function (\Rezonans\Core\Core $core) {
 
         /** @var string $logPath */
-        $logPath = $core->env('DEBUG_LOG', '/debug.log.html');
+        $logPath = Configurator::env('DEBUG_LOG', '/debug.log.html');
 
         $core->setLogger((new Logger('debug'))
             ->pushHandler(
@@ -25,4 +24,4 @@ $core = new Core();
                     )
             ));
     })
-    ->handle($core);
+    ->handle(Core::get('core'));
