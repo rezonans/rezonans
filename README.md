@@ -1,9 +1,9 @@
-<p align="center"><img src="https://comet.by/img/resonans-1-compiled.svg"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/1494325/62109653-64b63c00-b2b5-11e9-87a3-3419cd156130.png"></p>
 <p align="center"><sup>Docker ∿ WordPress ∿ Modern Application ∿ Modern Front ∿ CI</sup></p>
 <p align="center">
 <a href="https://travis-ci.org/rezonans/rezonans"><img src="https://travis-ci.org/rezonans/rezonans.svg?branch=master"></a>
-<img src="https://img.shields.io/packagist/dt/rezonans/rezonans.svg">
-<img src="https://img.shields.io/github/license/rezonans/rezonans.svg">
+<img src="https://img.shields.io/packagist/dt/rezonans/rezonans">
+<img src="https://img.shields.io/github/license/rezonans/rezonans">
 </p>
 
 ### Usage
